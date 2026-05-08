@@ -1,11 +1,46 @@
 {
   "metadata": {
     "generatedAt": "2026-05-08T00:00:00.000Z",
-    "lastUpdated": "2026-05-07T18:00:00.000Z",
+    "lastUpdated": "2026-05-07T22:14:00.000Z",
     "policy": "Official public-health sources create canonical records. News links are citations/context unless corroborated by an official authority.",
     "schemaVersion": 1
   },
   "records": [
+    {
+      "id": "israel-eastern-europe-travel-case",
+      "title": "Israel reports hantavirus case after Eastern Europe travel",
+      "type": "news",
+      "confidence": "reviewed",
+      "confidenceLabel": "Reviewed media report; awaiting official public-health bulletin",
+      "updatedAt": "2026-05-07T22:14:00.000Z",
+      "location": {
+        "name": "Israel",
+        "lat": 31.0461,
+        "lng": 34.8516,
+        "precision": "country"
+      },
+      "metrics": {
+        "totalPeople": 1,
+        "confirmed": 1,
+        "suspected": 0,
+        "deaths": 0
+      },
+      "summary": "Jerusalem Post reported, citing Maariv, that a patient in Israel was diagnosed with hantavirus after likely exposure during travel in Eastern Europe several months earlier. The report says PCR testing confirmed infection, the patient was stable under medical observation, and the case was reported to Israel's Health Ministry. No official ministry bulletin has been attached yet, so this remains a reviewed media record.",
+      "sources": [
+        {
+          "name": "The Jerusalem Post",
+          "title": "First hantavirus case diagnosed in Israel after patient's visit to Eastern Europe",
+          "url": "https://www.jpost.com/israel-news/article-895478",
+          "type": "media"
+        },
+        {
+          "name": "Politis",
+          "title": "Israel Reports First Hantavirus Case After Patient Returned From Eastern Europe",
+          "url": "https://en.politis.com.cy/news/1003524/israel-reports-first-hantavirus-case-after-patient-returned-from-eastern-europe",
+          "type": "media"
+        }
+      ]
+    },
     {
       "id": "who-hondius-cabo-verde",
       "title": "MV Hondius passenger monitoring near Cabo Verde",

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Source-backed hantavirus information map with official public-health updates, citations, and transparent data methodology."
+      content="Source-backed hantavirus information map with official public-health updates, citations, and source transparency."
     />
     <title>Hantavirus Information Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -20,7 +20,6 @@
         </a>
         <div class="nav-links">
           <a href="#map-section">Map</a>
-          <a href="#methodology">Methodology</a>
           <a href="#sources">Sources</a>
         </div>
       </nav>
@@ -105,32 +104,15 @@
         </section>
       </section>
 
-      <section class="content-grid" id="methodology">
-        <article class="info-block">
-          <p class="section-label">Methodology</p>
-          <h2>How records become map points</h2>
-          <p>
-            Official sources create the canonical event record. News articles can be attached as citations, but
-            they do not upgrade a record to confirmed unless a public-health authority supports the claim.
-          </p>
-          <ol class="method-list">
-            <li>Fetch WHO, CDC, and public-health authority updates.</li>
-            <li>Store raw documents with hashes and retrieval timestamps.</li>
-            <li>Normalize case status, location precision, dates, and citations.</li>
-            <li>Flag non-official signals for review before publication.</li>
-          </ol>
-        </article>
-
-        <article class="info-block" id="sources">
-          <p class="section-label">Source Policy</p>
-          <h2>Accuracy over speed</h2>
-          <p>
-            Hantavirus data can be delayed, provisional, or privacy-limited. The tracker displays geographic
-            precision and confidence so users know whether a point represents a country, state, city, port, or
-            approximate region.
-          </p>
-          <div id="source-list" class="source-list"></div>
-        </article>
+      <section class="info-block source-policy" id="sources">
+        <p class="section-label">Source Policy</p>
+        <h2>Accuracy over speed</h2>
+        <p>
+          Hantavirus data can be delayed, provisional, or privacy-limited. The tracker displays geographic
+          precision and confidence so users know whether a point represents a country, state, city, port, or
+          approximate region.
+        </p>
+        <div id="source-list" class="source-list"></div>
       </section>
 
       <section class="kaizen-cta" aria-label="About Kaizen Health">
