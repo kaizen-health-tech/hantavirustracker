@@ -475,6 +475,56 @@ main {
   border-color: var(--accent);
 }
 
+.kaizen-cta {
+  margin-top: 1rem;
+  padding: 1.35rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(36, 124, 104, 0.1), rgba(47, 111, 179, 0.06)),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.kaizen-cta h2,
+.kaizen-cta p {
+  margin: 0;
+}
+
+.kaizen-cta h2 {
+  margin-top: 0.35rem;
+  font-size: 1.55rem;
+}
+
+.kaizen-cta p:not(.section-label) {
+  max-width: 680px;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.kaizen-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 850;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.kaizen-cta a:hover {
+  background: #1b6656;
+}
+
 .footer {
   max-width: 1180px;
   margin: 0 auto;
@@ -807,6 +857,7 @@ main {
 @media (max-width: 620px) {
   .nav,
   .map-header,
+  .kaizen-cta,
   .footer,
   .selected-card {
     align-items: flex-start;
