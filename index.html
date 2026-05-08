@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Source-backed hantavirus information map with official public-health updates, citations, and transparent data methodology."
+    />
+    <title>Hantavirus Information Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Hantavirus Information Map home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Hantavirus Information Map</span>
+        </a>
+        <div class="nav-links">
+          <a href="#map-section">Map</a>
+          <a href="#methodology">Methodology</a>
+          <a href="#sources">Sources</a>
+        </div>
+      </nav>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Source-backed public health information</p>
+          <h1>Track official hantavirus updates without the alarmism.</h1>
+          <p>
+            This map separates confirmed public-health information from monitoring signals and news citations.
+            Each location includes source links, data confidence, and geographic precision.
+          </p>
+        </div>
+
+        <div class="summary-panel" aria-label="Current tracker summary">
+          <div>
+            <strong id="visible-count">0</strong>
+            <span>visible records</span>
+          </div>
+          <div>
+            <strong id="country-count">0</strong>
+            <span>locations</span>
+          </div>
+          <div>
+            <strong id="official-count">0</strong>
+            <span>officially sourced</span>
+          </div>
+          <div>
+            <strong id="last-updated">--</strong>
+            <span>last data refresh</span>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="map-layout" id="map-section" aria-label="Hantavirus information map">
+        <aside class="controls panel">
+          <div class="panel-heading">
+            <p>Explore Records</p>
+            <span>Filter by source confidence and status</span>
+          </div>
+
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="search-input" type="search" placeholder="Search location, source, summary..." />
+          </label>
+
+          <div class="filter-grid" id="type-filters" aria-label="Record type filters"></div>
+
+          <label class="checkbox-row">
+            <input id="official-only" type="checkbox" />
+            <span>Official sources only</span>
+          </label>
+
+          <button class="secondary-button" id="reset-filters" type="button">Reset filters</button>
+
+          <div class="record-list-wrap">
+            <div class="section-label">Records</div>
+            <div id="record-list" class="record-list"></div>
+          </div>
+        </aside>
+
+        <section class="map-card panel">
+          <div class="map-header">
+            <div>
+              <p>Global Map</p>
+              <span>Click a marker to view citations and source notes</span>
+            </div>
+            <div class="map-note">OpenStreetMap base layer</div>
+          </div>
+          <div class="map-stage">
+            <div id="map" class="real-map" role="application" aria-label="Interactive map with hantavirus records"></div>
+            <div class="map-legend" aria-label="Legend">
+              <div><span class="swatch official"></span>Official update</div>
+              <div><span class="swatch monitoring"></span>Monitoring</div>
+              <div><span class="swatch news"></span>News citation</div>
+              <div><span class="swatch guidance"></span>Guidance</div>
+            </div>
+          </div>
+          <article class="selected-card" id="selected-card" aria-live="polite"></article>
+        </section>
+      </section>
+
+      <section class="content-grid" id="methodology">
+        <article class="info-block">
+          <p class="section-label">Methodology</p>
+          <h2>How records become map points</h2>
+          <p>
+            Official sources create the canonical event record. News articles can be attached as citations, but
+            they do not upgrade a record to confirmed unless a public-health authority supports the claim.
+          </p>
+          <ol class="method-list">
+            <li>Fetch WHO, CDC, and public-health authority updates.</li>
+            <li>Store raw documents with hashes and retrieval timestamps.</li>
+            <li>Normalize case status, location precision, dates, and citations.</li>
+            <li>Flag non-official signals for review before publication.</li>
+          </ol>
+        </article>
+
+        <article class="info-block" id="sources">
+          <p class="section-label">Source Policy</p>
+          <h2>Accuracy over speed</h2>
+          <p>
+            Hantavirus data can be delayed, provisional, or privacy-limited. The tracker displays geographic
+            precision and confidence so users know whether a point represents a country, state, city, port, or
+            approximate region.
+          </p>
+          <div id="source-list" class="source-list"></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Medical information notice</strong>
+      <span>
+        This site is informational and source-backed. It is not medical advice. For diagnosis, treatment, and
+        official case counts, consult CDC, WHO, and local public health authorities.
+      </span>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

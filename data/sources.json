@@ -1,0 +1,45 @@
+{
+  "sources": [
+    {
+      "id": "who-don",
+      "name": "WHO Disease Outbreak News",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news",
+      "apiUrl": "https://www.who.int/api/news/diseaseoutbreaknews",
+      "role": "Canonical international outbreak updates",
+      "trustLevel": "official",
+      "refreshCadence": "Every 60 minutes"
+    },
+    {
+      "id": "cdc-nndss",
+      "name": "CDC NNDSS",
+      "url": "https://www.cdc.gov/nndss/infectious-disease/",
+      "role": "U.S. weekly and annual notifiable disease surveillance",
+      "trustLevel": "official",
+      "refreshCadence": "Daily check; weekly publication expected"
+    },
+    {
+      "id": "cdc-hantavirus",
+      "name": "CDC Hantavirus Surveillance",
+      "url": "https://www.cdc.gov/hantavirus/php/surveillance/index.html",
+      "role": "Case definition and reporting guidance",
+      "trustLevel": "official",
+      "refreshCadence": "Daily check"
+    },
+    {
+      "id": "health-authorities",
+      "name": "National and local health authorities",
+      "url": "https://www.who.int/about/collaboration/member-states",
+      "role": "Local official bulletins and public health advisories",
+      "trustLevel": "official",
+      "refreshCadence": "Every 30-60 minutes during active events"
+    },
+    {
+      "id": "reviewed-news",
+      "name": "Reviewed news citations",
+      "url": "https://www.ap.org/",
+      "role": "Context only unless corroborated by official sources",
+      "trustLevel": "context",
+      "refreshCadence": "Every 15-30 minutes; publish after review"
+    }
+  ]
+}

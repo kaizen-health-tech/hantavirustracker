@@ -1,0 +1,12 @@
+{
+  "name": "hantavirus-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:review-queue": "node scripts/build-review-queue.mjs",
+    "dev": "node server.mjs",
+    "ingest:official": "node scripts/ingest-official-sources.mjs",
+    "start": "node server.mjs"
+  }
+}
